@@ -50,7 +50,7 @@ class PostsController < ApplicationController
     def destroy        
         @post =Post.find(params[:id])
         @comments_d=@post.comments
-
+        
         @comments_d.delete_all
         @post.destroy
         redirect_to root_path
